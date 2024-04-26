@@ -22,11 +22,13 @@ describe("My first test suite", function () {
       .find(".product")
       .each(($el, index, $list) => {
         // Parentheses added here
-        const textVeg = $el.find("h4.product-name").text()     // text is a jquery function and it is storing all the products and in textveg all elements are stored
+        const textVeg = $el.find("h4.product-name").text()     
+        // text is a jquery function and it is storing all the products and in textveg all elements are stored
         if (textVeg.includes("Cashew")) {
           cy.wrap($el).find("button").click()
         }
-        console.log("Code execution from javascript")       // ccheck on console by inspecting , it will be pronted firtst while other tst are going on , this asynchronous
+        console.log("Code execution from javascript")     
+          // ccheck on console by inspecting , it will be pronted firtst while other tst are going on , this asynchronous
       })
   })
 })
