@@ -1,6 +1,6 @@
 describe("POST request Test", () => {
     it("Should create a new user and verify response", () => {
-      cy.request({
+      cy.request({                                                              //cy.request coming from jquery
         method: "POST",
         url: "https://reqres.in/api/users",
         body: {
